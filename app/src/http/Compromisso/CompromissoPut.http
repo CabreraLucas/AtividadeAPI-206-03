@@ -1,0 +1,10 @@
+PUT  https://8080-cabreraluca-atividadeap-jaf60tllrj5.ws-us110.gitpod.io/compromissos/1
+Content-Type: application/json
+
+{
+    "descricao" : "Viagem Ônibus",
+    "dataInicio" : "29/03",
+    "dataFim" : "01/04",
+    "horaInicio" : "14h00",
+    "horaFim" : "19h00"
+}

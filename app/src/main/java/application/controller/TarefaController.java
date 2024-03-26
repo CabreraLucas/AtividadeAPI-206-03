@@ -39,6 +39,7 @@ public class TarefaController {
         Tarefa resposta = tarefaRepo.findById(id).get();
         resposta.setDescricao(tarefa.getDescricao());
         resposta.setConcluido(true);
+        resposta.setConcluido(false);
 
         return tarefaRepo.save(resposta);
     }

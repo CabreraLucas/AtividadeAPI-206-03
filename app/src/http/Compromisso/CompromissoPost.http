@@ -1,0 +1,10 @@
+POST https://8080-cabreraluca-atividadeap-jaf60tllrj5.ws-us110.gitpod.io/compromissos
+Content-Type: application/json
+
+{
+    "descricao" : "Festa",
+    "dataInicio" : "13/04",
+    "dataFim" : "18/04",
+    "horaInicio" : "7h00",
+    "horaFim" : "23h00"
+}

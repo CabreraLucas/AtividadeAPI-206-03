@@ -1,4 +1,4 @@
-POST https://8080-cabreraluca-atividadeap-jaf60tllrj5.ws-us110.gitpod.io/compromissos
+POST https://8080-cabreraluca-atividadeap-jaf60tllrj5.ws-us110.gitpod.io/tarefas
 Content-Type: application/json
 
 {
