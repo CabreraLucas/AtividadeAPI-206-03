@@ -1,7 +1,7 @@
-POST https://8080-cabreraluca-atividadeap-jaf60tllrj5.ws-us110.gitpod.io/tarefas
+POST https://8080-cabreraluca-atividadeap-jaf60tllrj5.ws-us110.gitpod.io/compromissos
 Content-Type: application/json
 
 {
-    "descricao" : "Atividade IA",
+    "descricao" : "Atividade Inglês",
     "concluido" : "False"
 }
