@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -32,6 +33,16 @@ public class TarefaController {
     @GetMapping("tarefas/{id}")
     public Tarefa getOne(@PathVariable Long id){
         return tarefaRepo.findById(id).get();
+    }
+
+    @PatchMapping("tarefas/{id}")
+    public Tarefa patch(@RequestBody Tarefa tarefa, @PathVariable Long id){
+        Tarefa resposta = tarefaRepo.findById(id).get();
+        if(tarefa.getDescricao() != null){
+            resposta.setDescricao(tarefa.getDescricao());
+        }
+        resposta.setConcluido(tarefa.getConcluido());
+        return tarefaRepo.save(resposta);
     }
 
     @PutMapping("tarefas/{id}")
