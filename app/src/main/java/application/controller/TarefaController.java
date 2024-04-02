@@ -35,6 +35,15 @@ public class TarefaController {
         return tarefaRepo.findById(id).get();
     }
 
+    @PutMapping("tarefas/{id}")
+    public Tarefa put(@RequestBody Tarefa tarefa, @PathVariable Long id){
+        Tarefa resposta = tarefaRepo.findById(id).get();
+        resposta.setDescricao(tarefa.getDescricao());
+        resposta.setConcluido(tarefa.getConcluido());
+
+        return tarefaRepo.save(resposta);
+    }
+
     @PatchMapping("tarefas/{id}")
     public Tarefa patch(@RequestBody Tarefa tarefa, @PathVariable Long id){
         Tarefa resposta = tarefaRepo.findById(id).get();
@@ -42,15 +51,6 @@ public class TarefaController {
             resposta.setDescricao(tarefa.getDescricao());
         }
         resposta.setConcluido(tarefa.getConcluido());
-        return tarefaRepo.save(resposta);
-    }
-
-    @PutMapping("tarefas/{id}")
-    public Tarefa put(@RequestBody Tarefa tarefa, @PathVariable Long id){
-        Tarefa resposta = tarefaRepo.findById(id).get();
-        resposta.setDescricao(tarefa.getDescricao());
-        resposta.setConcluido(tarefa.getConcluido());
-
         return tarefaRepo.save(resposta);
     }
 
