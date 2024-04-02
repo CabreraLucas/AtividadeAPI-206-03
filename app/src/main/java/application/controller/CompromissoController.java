@@ -34,17 +34,17 @@ public class CompromissoController {
         return compromissoRepo.findById(id).get();
     }
 
-    @PutMapping("/compromissos/{id}")
-    public Compromisso put(@RequestBody Compromisso compromisso, @PathVariable Long id){
-        Compromisso resposta = compromissoRepo.findById(id).get();
-        resposta.setDescricao(compromisso.getDescricao());
-        resposta.setDataInicio(compromisso.getDataInicio());
-        resposta.setDataFim(compromisso.getDataFim());
-        resposta.setHoraInicio(compromisso.getHoraInicio());
-        resposta.setHoraFim(compromisso.getHoraFim());
+    // @PutMapping("/compromissos/{id}")
+    // public Compromisso put(@RequestBody Compromisso compromisso, @PathVariable Long id){
+    //     Compromisso resposta = compromissoRepo.findById(id).get();
+    //     resposta.setDescricao(compromisso.getDescricao());
+    //     resposta.setDataInicio(compromisso.getDataInicio());
+    //     resposta.setDataFim(compromisso.getDataFim());
+    //     resposta.setHoraInicio(compromisso.getHoraInicio());
+    //     resposta.setHoraFim(compromisso.getHoraFim());
 
-        return compromissoRepo.save(resposta);
-    }
+    //     return compromissoRepo.save(resposta);
+    // }
 
     @DeleteMapping("compromissos/{id}")
     public void delete(@PathVariable Long id){

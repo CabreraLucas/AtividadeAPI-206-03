@@ -38,8 +38,7 @@ public class TarefaController {
     public Tarefa put(@RequestBody Tarefa tarefa, @PathVariable Long id){
         Tarefa resposta = tarefaRepo.findById(id).get();
         resposta.setDescricao(tarefa.getDescricao());
-        resposta.setConcluido(true);
-        resposta.setConcluido(false);
+        resposta.setConcluido(tarefa.getConcluido());
 
         return tarefaRepo.save(resposta);
     }
